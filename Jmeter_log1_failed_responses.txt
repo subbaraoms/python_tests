@@ -1,0 +1,5 @@
+Respone code: 504 | Response message: Gateway Time-out 	 | Failure message:  | PST Time: 2021-02-09 06:01:23 PST | label: Direct_test_Services_QuoteRequest 
+Respone code: 504 | Response message: Gateway Timeout 	 | Failure message:  | PST Time: 2021-02-09 06:01:23 PST | label: Internal_Quote_Travel 
+Respone code: 504 | Response message: Gateway Timeout 	 | Failure message:  | PST Time: 2021-02-09 06:01:30 PST | label: Proxy_test_Services_QuoteRequest 
+Respone code: 504 | Response message: Gateway Timeout 	 | Failure message:  | PST Time: 2021-02-09 06:02:55 PST | label: Proxy_test_Services_QuoteRequest 
+Respone code: 504 | Response message: Gateway Timeout 	 | Failure message:  | PST Time: 2021-02-09 06:03:04 PST | label: Internal_Quote_Travel 
