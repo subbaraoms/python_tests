@@ -1,7 +1,7 @@
 import csv,datetime,json,pytz
 import xml.etree.ElementTree as ET
 
-# Program1 to update the DEPART and RETURN dates in the XML file
+# Problem 1 - to update the DEPART and RETURN dates in the XML file
 def update_xml_data(dep, ret):
     xml_tree = ET.parse('test_payload1.xml')
     xml_roots = xml_tree.getroot()
@@ -14,7 +14,7 @@ def update_xml_data(dep, ret):
     # write the modified XML to a new file
     xml_tree.write('updated_test_payload1.xml')
     
-# Program2 to delete an element (nested/non nested) from JSON file
+# Problem 2 - to delete an element (nested/non nested) from JSON file
 def delete_json_data(element_to_delete):
     objects = json.load(open("test_payload.json"))
     # if the element_to_delete is at root level, then delete the item direcly
@@ -37,7 +37,7 @@ def delete_json_data(element_to_delete):
 
     open("updated_test_payload.json", "w").write(json.dumps(objects, indent=2))
 
-# Program3 to parse CSV file and prints the non-successful responses
+# Problem 3 - to parse CSV file and prints the non-successful responses
 def get_failed_responses_csv():
     with open('Jmeter_log1.jtl') as csv_file:
         csv_data = csv.reader(csv_file, delimiter=',')
@@ -49,8 +49,8 @@ def get_failed_responses_csv():
                  datetime_pst = datetime_utc.replace(tzinfo=pytz.timezone('UTC')).astimezone(pytz.timezone('US/Pacific')).strftime('%Y-%m-%d %H:%M:%S %Z')
                  print(f'Respone code: {row[3]} | Response message: {row[4]} \t | Failure message: {row[8]} | PST Time: {datetime_pst} | label: {row[2]} ')
 
-update_xml_data(10,20)      # Program 1
-delete_json_data('appdate') # Program 2
-get_failed_responses_csv()  # Program 3
+update_xml_data(10,20)      # Problem 1
+delete_json_data('appdate') # Problem 2
+get_failed_responses_csv()  # Problem 3
 
 
